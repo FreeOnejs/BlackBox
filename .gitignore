@@ -10,9 +10,7 @@ node_modules
 # Ignore platform-specific Next.js binaries
 node_modules/@next/swc-linux-x64-gnu/next-swc.linux-x64-gnu.node
 # .gitignore
+# Environment variables
 .env
-# Ignore environment variable files
 .env.local
-.env.development.local
-.env.test.local
-.env.production.local   
+.env.*.local
