@@ -15,7 +15,6 @@ const Products: React.FC = () => {
       {/* Mobile-only components */}
       <div className="md:hidden">
         <MobileProductsPage />
-        <Footer />
       </div>
       {/* Desktop-only component */}
       <div className="hidden md:block">
@@ -37,14 +36,14 @@ const Products: React.FC = () => {
           </div>
         </div>
         <div className="relative z-10">
+          <h2 className="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-center mt-32 mb-4">Products</h2>
           <StarsCanvas />
-          <div className="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 py-16 px-4">
+          <div className="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 py-8 px-4">
             {products.map((product) => (
               <ProductCard key={product.slug} product={product} />
             ))}
           </div>
         </div>
-        <Footer />
       </div>
     </>
   );
